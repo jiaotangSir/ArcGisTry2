@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_query_center_around"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jiaotang.arcgistry2.QueryCenterAroundActivity">
+
+
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="showAroundFeature"/>
+
+    <com.esri.android.map.MapView
+        android:id="@+id/around_map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+
+
+        >
+    </com.esri.android.map.MapView>
+    <!--mapoptions.MapType="Topo"-->
+    <!--mapoptions.center="34.056215, -117.195668"-->
+    <!--mapoptions.ZoomLevel="8"-->
+
+</LinearLayout>

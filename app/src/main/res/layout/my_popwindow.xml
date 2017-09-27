@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/icon_pop"
+        >
+        <LinearLayout
+            android:id="@+id/queryPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_point"
+
+                />
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="查询点"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"/>
+        <LinearLayout
+            android:id="@+id/queryLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_line"
+                />
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="查询线"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"/>
+        <LinearLayout
+            android:id="@+id/queryPolygon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_polygon"
+                />
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="查询面"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/queryCircle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_circle"
+                />
+            <LinearLayout
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="查询圆"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textColor="@android:color/background_dark"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

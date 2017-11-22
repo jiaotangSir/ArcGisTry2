@@ -1,4 +1,4 @@
-package com.jiaotang.arcgistry2;
+package com.jiaotang.arcgistry2.useless;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -22,10 +22,10 @@ import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 import com.esri.android.map.event.OnSingleTapListener;
 import com.esri.core.geometry.Envelope;
 import com.esri.core.geometry.Point;
-import com.esri.core.geometry.Polygon;
 import com.esri.core.tasks.identify.IdentifyParameters;
 import com.esri.core.tasks.identify.IdentifyResult;
 import com.esri.core.tasks.identify.IdentifyTask;
+import com.jiaotang.arcgistry2.R;
 
 import java.util.ArrayList;
 import java.util.List;

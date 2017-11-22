@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+
+    <CheckBox
+        android:text="供水管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_gongshui"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="上水管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_shangshui"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="废水管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_feishui"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="污水管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_wushui"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="雨水管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_yushui"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="脏水管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_zangshui"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="天然气管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_tianranqi"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="热力管线"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_reli"
+        android:checked="true" />
+</LinearLayout>

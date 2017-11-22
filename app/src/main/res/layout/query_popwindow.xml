@@ -11,8 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/icon_pop"
+        android:background="#ffffff"
         >
+        <!--android:background="@drawable/icon_pop"-->
         <LinearLayout
             android:id="@+id/queryPoint"
             android:layout_width="match_parent"

@@ -18,10 +18,13 @@ import com.esri.core.tasks.query.QueryTask;
 
 import java.util.Map;
 
+import static com.jiaotang.arcgistry2.PolygonActivity.GONGSHUI;
+
 /**
  * Created by Administrator on 2017/9/25.
  */
 
+//
 public class Singleton {
 
     public PolygonActivity pa;
@@ -30,8 +33,6 @@ public class Singleton {
     private Polygon polygon;
     private int symbolId;
     private String[] parm;
-
-
 
 
 //    private static Singleton instance = null;
@@ -67,10 +68,6 @@ public class Singleton {
 
         @Override
         protected void onPreExecute() {
-//            progress = new ProgressDialog(PolygonActivity.this);
-
-//            progress = ProgressDialog.show(PolygonActivity.this, "",
-//                    "Please wait....query task is executing");
 
         }
 
@@ -121,11 +118,43 @@ public class Singleton {
         @Override
         protected void onPostExecute(FeatureResult results) {
 
-            String message = "No result comes back";
-            Log.d("data", "此时的symbolId为：" + symbolId);
-
             if (results != null) {
                 int size = (int) results.featureCount();
+
+                SimpleLineSymbol lineSymbol = null;
+                switch (symbolId) {
+                    case PolygonActivity.GONGSHUI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#00FFFF"),2);
+                        break;
+                    case PolygonActivity.SHANGSHUI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#00FFFF"),2);
+                        break;
+                    case PolygonActivity.FEISHUI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
+                        break;
+                    case PolygonActivity.WUSHUI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
+                        break;
+                    case PolygonActivity.YUSHUI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
+                        break;
+                    case PolygonActivity.ZANGSHUI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
+                        break;
+                    case PolygonActivity.TIANRANQI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#EC008C"),2);
+                        break;
+                    case PolygonActivity.RELI:
+                        lineSymbol = new SimpleLineSymbol(Color.parseColor("#FBBE9F"),2);
+                        break;
+
+                    default:
+                        break;
+
+                }
+
+
+
                 for (Object element : results) {
 //                    progress.incrementProgressBy(size / 100);
                     if (element instanceof Feature) {
@@ -139,44 +168,9 @@ public class Singleton {
 //                        Graphic graphic = new Graphic(feature.getGeometry(),
 //								feature.getSymbol(), feature.getAttributes());
 
-                        SimpleLineSymbol lineSymbol = null;
-                        switch (symbolId) {
-                            case 2:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#00FFFF"),2);
-                                break;
-                            case 4:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#00FFFF"),2);
-                                break;
-                            case 7:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
-                                break;
-                            case 9:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
-                                break;
-                            case 11:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
-                                break;
-                            case 13:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#B97C0D"),2);
-                                break;
-                            case 16:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#EC008C"),2);
-                                break;
-                            case 19:
-                                lineSymbol = new SimpleLineSymbol(Color.parseColor("#FBBE9F"),2);
-                                break;
-
-                            default:
-                                break;
-
-                        }
-
-                        Map<String,Object> m = feature.getAttributes();
-                        Symbol s = feature.getSymbol();
-
                         Graphic graphic = new Graphic(feature.getGeometry(),
                                 lineSymbol, feature.getAttributes());
-                        pa.showGuanXian(graphic);
+                        pa.showGuanXian(graphic,symbolId);
                         // add graphic to layer
 //                        graphicsLayer.addGraphic(graphic);
 
@@ -184,15 +178,8 @@ public class Singleton {
 //                        editMode = PolygonActivity.EditMode.NONE;
                     }
                 }
-                // update message with results
-                message = String.valueOf(results.featureCount())
-                        + " results have returned from query.";
 
             }
-//            progress.dismiss();
-//            Toast toast = Toast.makeText(PolygonActivity.this, message,
-//                    Toast.LENGTH_LONG);
-//            toast.show();
 
         }
 

@@ -6,41 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.jiaotang.arcgistry2.PolygonActivity">
 
-    <!--<Button-->
-        <!--android:text="圆形"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/button"-->
-        <!--android:onClick="showCircle"-->
-
-        <!--/>-->
-
-
-    <!--<Button-->
-        <!--android:text="点"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/button3"-->
-        <!--android:onClick="showPoint"/>-->
-
-
-    <!--<Button-->
-        <!--android:text="多边形"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/button4"-->
-        <!--android:onClick="showPolygon"/>-->
-
-
-    <!--<Button-->
-        <!--android:text="折线查询"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/button5"-->
-        <!--android:onClick="showPolyline"-->
-        <!--/>-->
-
-
     <com.esri.android.map.MapView
         android:id="@+id/polygon_map"
         android:layout_width="fill_parent"
@@ -50,18 +15,49 @@
         android:layout_alignParentStart="true">
     </com.esri.android.map.MapView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_controlLayer"
+        android:onClick="controlLayer"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/icon_control"
+        android:layout_below="@+id/queryTool"
+        android:layout_alignLeft="@+id/queryTool"
+        android:layout_alignStart="@+id/queryTool"
+        android:minWidth="0dp"
+        android:minHeight="0dp"/>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/icon_tool"
         android:id="@+id/queryTool"
         android:onClick="showTool"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_below="@+id/line1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+
+        android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp" />
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="管线查询"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
